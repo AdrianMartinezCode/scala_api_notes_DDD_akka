@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/adrian/IdeaProjects/ScalaRestAPI/src/main/scala/WebServer.scala:19:5: expected start of definition[0m
-[0m[[0m[31merror[0m] [0m[0m    val route1 =[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
