@@ -1,8 +1,11 @@
+import akka.Done
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
+
+import scala.concurrent.Future
 import scala.io.StdIn
 
 object WebServer{
@@ -11,10 +14,22 @@ object WebServer{
     implicit val materializer = ActorMaterializer()
     implicit val executionContext = system.dispatcher
 
-    var notes: List[Note] = Nil
+    var users_db: List[User] = Nil
 
     final case class Note(name:String, text:String, id:Long)
-    final 
+    final case class User(name:String, id:Long, notes:List[Note])
+    final case class DB(users: List[User])
+
+    def fetchUser(idUser:Long): Future[Option[User]] = Future {
+      users_db.find(u => u.id == idUser)
+    }
+    def saveUser(db: DB): Future[Done] = {
+      users_db = db match {
+        case DB(users) => users ::: users_db
+        case _         => users_db
+      }
+      Future {Done}
+    }
 
     val route1 =
       path("hello") {
