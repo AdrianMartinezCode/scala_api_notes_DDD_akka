@@ -4,7 +4,7 @@
 		module="scalarestapi_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190310161220"
+		publication="20190409185647"
 	>
 		<description>
 		ScalaRestAPI
