@@ -3,7 +3,6 @@ package server.service
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.{ActorMaterializer, Materializer}
-import data.UsersRepository
 
 import scala.io.StdIn
 

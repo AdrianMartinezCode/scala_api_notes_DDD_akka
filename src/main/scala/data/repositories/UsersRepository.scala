@@ -10,7 +10,6 @@ import scala.concurrent.{ExecutionContextExecutor, Future}
 
 object UsersRepository {
   implicit val system: ActorSystem = ActorSystem("my-system")
-  implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContextExecutor = system.dispatcher
 
   var users_db: List[User] = Nil
