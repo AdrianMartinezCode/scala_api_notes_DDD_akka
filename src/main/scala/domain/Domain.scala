@@ -2,8 +2,8 @@ import domain.{Note, User}
 
 trait RestMessage
 
-case class GetUsersWithNotes(usersWithNotes: List[User]) extends RestMessage
-case class UsersWithNotes(users: Seq[User]) extends RestMessage
+case class GetUsers(users: List[User]) extends RestMessage
+case class Users(users: Seq[User]) extends RestMessage
 
 case class GetNotes(notes: List [Note]) extends RestMessage
 case class Notes(notes: Seq[Note]) extends RestMessage

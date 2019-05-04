@@ -14,6 +14,7 @@ import spray.json._
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 
+// https://medium.com/@ian.shiundu/building-a-fully-functional-rest-service-using-akka-actors-8b5c12978380
 
 trait Service extends Directives with JsonSupport {
   implicit val system: ActorSystem
