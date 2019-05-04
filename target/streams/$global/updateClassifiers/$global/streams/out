@@ -2854,38 +2854,170 @@
 [debug] == resolving dependencies com.adrianmartinezcode#scalarestapi$sources;1.0->jline#jline;2.14.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.12;2.5.21!akka-testkit_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-protobuf_2.12;2.5.21!akka-protobuf_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http_2.12;10.1.7!akka-http_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-spray-json_2.12;10.1.7!akka-http-spray-json_2.12.jar(src)
-[debug] 	[NOT REQUIRED] io.spray#spray-json_2.12;1.3.5!spray-json_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.2!reactive-streams.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-core_2.12;10.1.7!akka-http-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.3.7!ssl-config-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.3!config.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.21!akka-stream_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-parsing_2.12;10.1.7!akka-parsing_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.21!akka-actor_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-testkit_2.12;10.1.7!akka-http-testkit_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
-[debug] :: resolution report :: resolve 112ms :: artifacts dl 5ms
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 compile produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-compile.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 runtime produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-runtime.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 test produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-test.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 provided produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-provided.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 optional produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-optional.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 compile-internal produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-compile-internal.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 runtime-internal produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-runtime-internal.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 test-internal produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-test-internal.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 plugin produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-plugin.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 pom produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-pom.xml
-[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 scala-tool produced in /home/adrian/IdeaProjects/ScalaRestAPI/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-scala-tool.xml
-[debug] 	resolve done (112ms resolve - 5ms download)
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-protobuf_2.12/2.5.21/srcs/akka-protobuf_2.12-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang/scala-library/2.12.8/srcs/scala-library-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-http_2.12/10.1.7/srcs/akka-http_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.21/akka-protobuf_2.12-2.5.21-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.12/10.1.7/akka-http_2.12-10.1.7-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.12/1.1.1/srcs/scala-parser-combinators_2.12-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-testkit_2.12/2.5.21/srcs/akka-testkit_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.1/scala-parser-combinators_2.12-1.1.1-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-http-spray-json_2.12/10.1.7/srcs/akka-http-spray-json_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.12/10.1.7/akka-http-spray-json_2.12-10.1.7-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.21/akka-protobuf_2.12-2.5.21-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.21/akka-protobuf_2.12-2.5.21-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.12/10.1.7/akka-http-spray-json_2.12-10.1.7-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.1/scala-parser-combinators_2.12-1.1.1-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.12/10.1.7/akka-http-spray-json_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.12/10.1.7/akka-http_2.12-10.1.7-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.1/scala-parser-combinators_2.12-1.1.1-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.12/10.1.7/akka-http_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.1/scala-parser-combinators_2.12-1.1.1-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.12/10.1.7/akka-http_2.12-10.1.7-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.21/akka-protobuf_2.12-2.5.21-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.12/10.1.7/akka-http-spray-json_2.12-10.1.7-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.1/scala-parser-combinators_2.12-1.1.1-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src) (798ms)
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-testkit_2.12;2.5.21!akka-testkit_2.12.jar(src) (798ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.reactivestreams/reactive-streams/1.0.2/srcs/reactive-streams-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/io.spray/spray-json_2.12/1.3.5/srcs/spray-json_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.5/spray-json_2.12-1.3.5-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.12/10.1.7/akka-http-spray-json_2.12-10.1.7-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-http-spray-json_2.12;10.1.7!akka-http-spray-json_2.12.jar(src) (819ms)
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.12/10.1.7/akka-http_2.12-10.1.7-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-http-core_2.12/10.1.7/srcs/akka-http-core_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.7/akka-http-core_2.12-10.1.7-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-http_2.12;10.1.7!akka-http_2.12.jar(src) (822ms)
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.21/akka-protobuf_2.12-2.5.21-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe/ssl-config-core_2.12/0.3.7/srcs/ssl-config-core_2.12-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-protobuf_2.12;2.5.21!akka-protobuf_2.12.jar(src) (824ms)
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.3.7/ssl-config-core_2.12-0.3.7-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-stream_2.12/2.5.21/srcs/akka-stream_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.12/2.5.21/akka-stream_2.12-2.5.21-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.5/spray-json_2.12-1.3.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.5/spray-json_2.12-1.3.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.3.7/ssl-config-core_2.12-0.3.7-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.3.7/ssl-config-core_2.12-0.3.7-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.12.8!scala-library.jar(src) (862ms)
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.7/akka-http-core_2.12-10.1.7-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.7/akka-http-core_2.12-10.1.7-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe/config/1.3.3/srcs/config-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.5/spray-json_2.12-1.3.5-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.3.7/ssl-config-core_2.12-0.3.7-sources.jar.sha1
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/io/spray/spray-json_2.12/1.3.5/spray-json_2.12-1.3.5-sources.jar
+[info] 	[SUCCESSFUL ] io.spray#spray-json_2.12;1.3.5!spray-json_2.12.jar(src) (267ms)
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-http-testkit_2.12/10.1.7/srcs/akka-http-testkit_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-testkit_2.12/10.1.7/akka-http-testkit_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.3.7/ssl-config-core_2.12-0.3.7-sources.jar
+[info] 	[SUCCESSFUL ] org.reactivestreams#reactive-streams;1.0.2!reactive-streams.jar(src) (301ms)
+[info] 	[SUCCESSFUL ] com.typesafe#ssl-config-core_2.12;0.3.7!ssl-config-core_2.12.jar(src) (277ms)
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-parsing_2.12/10.1.7/srcs/akka-parsing_2.12-sources.jar
+[debug] 		tried /home/adrian/.ivy2/local/com.typesafe.akka/akka-actor_2.12/2.5.21/srcs/akka-actor_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.1.7/akka-parsing_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.7/akka-http-core_2.12-10.1.7-sources.jar.sha1
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.12/2.5.21/akka-stream_2.12-2.5.21-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.12/2.5.21/akka-stream_2.12-2.5.21-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.1.7/akka-parsing_2.12-10.1.7-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.1.7/akka-parsing_2.12-10.1.7-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe#config;1.3.3!config.jar(src) (318ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang.modules/scala-java8-compat_2.12/0.8.0/srcs/scala-java8-compat_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-testkit_2.12/10.1.7/akka-http-testkit_2.12-10.1.7-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.1.7/akka-parsing_2.12-10.1.7-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-testkit_2.12/10.1.7/akka-http-testkit_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.12/10.1.7/akka-http-core_2.12-10.1.7-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-http-core_2.12;10.1.7!akka-http-core_2.12.jar(src) (549ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scalatest/scalatest_2.12/3.0.5/srcs/scalatest_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.12/2.5.21/akka-stream_2.12-2.5.21-sources.jar.sha1
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.1.7/akka-parsing_2.12-10.1.7-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-parsing_2.12;10.1.7!akka-parsing_2.12.jar(src) (369ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scalactic/scalactic_2.12/3.0.5/srcs/scalactic_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21-sources.jar.sha1
+[info] downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-testkit_2.12/10.1.7/akka-http-testkit_2.12-10.1.7-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.12/2.5.21/akka-stream_2.12-2.5.21-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-testkit_2.12/10.1.7/akka-http-testkit_2.12-10.1.7-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-stream_2.12;2.5.21!akka-stream_2.12.jar(src) (1251ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang.modules/scala-xml_2.12/1.0.6/srcs/scala-xml_2.12-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar.sha1
+[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src) (1024ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang/scala-reflect/2.12.8/srcs/scala-reflect-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-http-testkit_2.12;10.1.7!akka-http-testkit_2.12.jar(src) (1269ms)
+[debug] 		tried /home/adrian/.ivy2/local/org.scala-lang/scala-compiler/2.12.8/srcs/scala-compiler-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.8/scala-compiler-2.12.8-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.8/scala-compiler-2.12.8-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.8/scala-compiler-2.12.8-sources.jar
+[info] 	[SUCCESSFUL ] com.typesafe.akka#akka-actor_2.12;2.5.21!akka-actor_2.12.jar(src) (1354ms)
+[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src) (380ms)
+[debug] 		tried /home/adrian/.ivy2/local/jline/jline/2.14.6/srcs/jline-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8-sources.jar.sha1
+[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src) (1215ms)
+[info] downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src) (1278ms)
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.8/scala-compiler-2.12.8-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.8/scala-compiler-2.12.8-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src) (986ms)
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src) (1116ms)
+[info] 	[SUCCESSFUL ] jline#jline;2.14.6!jline.jar(src) (907ms)
+[debug] :: resolution report :: resolve 229ms :: artifacts dl 3373ms
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 compile produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-compile.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 runtime produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-runtime.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 test produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-test.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 provided produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-provided.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 optional produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-optional.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 compile-internal produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-compile-internal.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 runtime-internal produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-runtime-internal.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 test-internal produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-test-internal.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 plugin produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-plugin.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 pom produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-pom.xml
+[debug] 	report for com.adrianmartinezcode#scalarestapi$sources;1.0 scala-tool produced in /home/adrian/IdeaProjects/ScalaRESTAPINotes/target/scala-2.12/resolution-cache/reports/com.adrianmartinezcode-scalarestapi$sources-scala-tool.xml
+[debug] 	resolve done (229ms resolve - 3373ms download)
