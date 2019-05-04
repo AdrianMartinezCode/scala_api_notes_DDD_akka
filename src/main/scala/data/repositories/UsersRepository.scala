@@ -3,7 +3,7 @@ package data.repositories
 import akka.Done
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
-import data.model.{Note, User}
+import domain.{Note, User}
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 

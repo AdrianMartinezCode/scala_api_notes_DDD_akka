@@ -7,18 +7,13 @@ import akka.http.scaladsl.model.{ContentTypes, HttpEntity}
 import akka.http.scaladsl.server.{Directives, Route}
 import akka.http.scaladsl.server.Directives.{complete, get, path}
 import akka.stream.Materializer
-import data.model.{Note, User}
 import data.repositories.UsersRepository
+import domain.{Note, User}
 import server.service.AkkaHttpMicroservice.usersRepo
 import spray.json._
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 
-
-trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
-  implicit val noteFormat: RootJsonFormat[Note] = jsonFormat3(Note) // jsonFormat3 because Note has 3 attributes
-  implicit val userFormat: RootJsonFormat[User] = jsonFormat3(User) // same case
-}
 
 trait Service extends Directives with JsonSupport {
   implicit val system: ActorSystem
