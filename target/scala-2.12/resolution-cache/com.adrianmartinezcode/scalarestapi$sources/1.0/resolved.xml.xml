@@ -4,7 +4,7 @@
 		module="scalarestapi$sources"
 		revision="1.0"
 		status="integration"
-		publication="20190409185629"
+		publication="20190421000039"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

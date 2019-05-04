@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="scalarestapi,scalarestapi_4312,scalarestapi_6402" />
-    <profile name="sbt 2" modules="ScalaRestAPI,akka-http-microservice">
+    <profile name="sbt 1" modules="scalarestapinotes_7656" />
+    <profile name="sbt 2" modules="ScalaRestAPI">
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <parameters>
