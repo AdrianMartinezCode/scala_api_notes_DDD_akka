@@ -1,7 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/adrian/IdeaProjects/ScalaRestAPI/src/main/scala/data/repositories/UsersRepository.scala:37:12: patterns after a variable pattern cannot match (SLS 8.1.1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case users => users ::: users_db[0m
-[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/adrian/IdeaProjects/ScalaRestAPI/src/main/scala/data/repositories/UsersRepository.scala:38:25: unreachable code due to variable pattern 'users' on line 37[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case _         => users_db[0m
-[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
