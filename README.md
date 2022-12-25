@@ -6,24 +6,32 @@ NOTE: {idu} = idUser and {idr} = idNote
 
 ### USERS
 
-POST /users/adduser
+POST /user
 ````
 REQUEST 
 {
     name: String
 }
 RESPONSE {
-    idUser: long
+    idUser: String
 }
 ````
 
-GET /users/list
+GET /user
 ````
 RESPONSE {
     [
         {
             name: String,
-            idUser: long
+            idUser: String,
+            notes: [
+                {
+                    name: String,
+                    idNote: String,
+                    text: String,
+                },
+                ...
+            ]
         },
         {
             ...
@@ -32,21 +40,30 @@ RESPONSE {
 }
 ````
 
-GET /users/{idu}
+GET /user/{idu}
 ````
 RESPONSE {
-    name: long
+    idUser: String,
+    name: String,
+    notes: [
+        {
+            name: String,
+            idNote: String,
+            text: String,
+        },
+        ...
+    ]
 }
 ````
 
-DELETE /users/{idu}/deleteuser
+DELETE /user/{idu}
 ````
 REQUEST {}
 ````
 
 
 
-PUT /users/{idu}
+PUT /user/{idu}
 ````
 REQUEST {
     name: String
@@ -55,25 +72,27 @@ REQUEST {
 
 ### NOTES
 
-POST /users/{idu}/addnote
+POST /note
 ````
 REQUEST {
     name: String,
-    text: String
+    text: String,
+    idUser: String
 }
 RESPONSE {
-    idNote: long
+    idNote: String
 }
 ````
 
-GET /users/{idu}/allnotes
+GET /note
 ````
 RESPONSE {
     [
         {
-            idNote: long,
+            idNote: String,
             name: String,
-            text: String
+            text: String,
+            idUser: String
         },
         {
             ...
@@ -82,25 +101,27 @@ RESPONSE {
 }
 ````
 
-GET /users/{idu}/{idn}
+GET /note/{idn}
 ````
 RESPONSE {
-    idNote: long,
+    idNote: String,
     name: String,
-    text: String
+    text: String,
+    idUser: String
 }
 ````
 
-DELETE /users/{idu}/{idn}
+DELETE /note/{idn}
 ````
 REQUEST {}
 ````
 
-PUT /users/{idu}/{idn}
+PUT /note/{idn}
 ````
 REQUEST {
     name: String,
-    text: String
+    text: String,
+    idUser: String
 }
 ````
 

@@ -21,7 +21,7 @@ class GetUsersHttpController extends DefaultUsersController {
   val service = system.actorOf(Props[GetUsersService])
 
   val route: Route = get {
-    path("users") {
+    path("user") {
       complete((service ? GetUsers)
         .mapTo[GetUsersResponse]
         .map { users =>
