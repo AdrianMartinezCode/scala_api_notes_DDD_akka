@@ -6,7 +6,7 @@ NOTE: {idu} = idUser and {idr} = idNote
 
 ### USERS
 
-![#0000ff](https://placehold.it/15/3349ff/000000?text=+) POST /users/adduser
+POST /users/adduser
 ````
 REQUEST 
 {
@@ -17,7 +17,7 @@ RESPONSE {
 }
 ````
 
-![#00ff00](https://placehold.it/15/00ff00/000000?text=+) GET /users/list
+GET /users/list
 ````
 RESPONSE {
     [
@@ -32,21 +32,21 @@ RESPONSE {
 }
 ````
 
-![#00ff00](https://placehold.it/15/00ff00/000000?text=+) GET /users/{idu}
+GET /users/{idu}
 ````
 RESPONSE {
     name: long
 }
 ````
 
-![#ff0000](https://placehold.it/15/ff0000/000000?text=+) DELETE /users/{idu}/deleteuser
+DELETE /users/{idu}/deleteuser
 ````
 REQUEST {}
 ````
 
 
 
-![#ffff00](https://placehold.it/15/ffff00/000000?text=+) PUT /users/{idu}
+PUT /users/{idu}
 ````
 REQUEST {
     name: String
@@ -55,7 +55,7 @@ REQUEST {
 
 ### NOTES
 
-![#0000ff](https://placehold.it/15/3349ff/000000?text=+) POST /users/{idu}/addnote
+POST /users/{idu}/addnote
 ````
 REQUEST {
     name: String,
@@ -66,7 +66,7 @@ RESPONSE {
 }
 ````
 
-![#00ff00](https://placehold.it/15/00ff00/000000?text=+) GET /users/{idu}/allnotes
+GET /users/{idu}/allnotes
 ````
 RESPONSE {
     [
@@ -82,7 +82,7 @@ RESPONSE {
 }
 ````
 
-![#00ff00](https://placehold.it/15/00ff00/000000?text=+) GET /users/{idu}/{idn}
+GET /users/{idu}/{idn}
 ````
 RESPONSE {
     idNote: long,
@@ -91,12 +91,12 @@ RESPONSE {
 }
 ````
 
-![#ff0000](https://placehold.it/15/ff0000/000000?text=+) DELETE /users/{idu}/{idn}
+DELETE /users/{idu}/{idn}
 ````
 REQUEST {}
 ````
 
-![#ffff00](https://placehold.it/15/ffff00/000000?text=+) PUT /users/{idu}/{idn}
+PUT /users/{idu}/{idn}
 ````
 REQUEST {
     name: String,
