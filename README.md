@@ -1,4 +1,26 @@
-This project is an example of akka http service. Is a REST service.
+This project is an example of a REST API service.
+
+The architecture is based on akka actors:
+
+HTTP Level has their own actors to handle the incoming HTTP requests,
+then, I added two more levels of actors to handle the concurrency using
+a DDD approach, separating the notes and users bounded contexts.
+
+So, the second level of actors are the services, that they act as an internal
+logic command handlers (in a hexagonal architecture) to avoid the dependencies,
+needs to encapsulate the Service declaration from the different HttpControllers.
+In fact, every service is an actor, handling one message at a time, avoiding
+possible concurrent problems, like the third layer of actors.
+
+The third layer of actors is the database layer, that we have one actor per
+database, with this approach we can avoid different race conditions and simplify
+the logic.
+
+With this in mind we can draw the graph of dependencies between the actors:
+
+![Actors Diagram](https://github.com/AdrianMartinezCode/scalarestapinotes/blob/master/resources/actors_diagram.jpg?raw=true)
+
+
 
 The endpoints planned to define are:
 
