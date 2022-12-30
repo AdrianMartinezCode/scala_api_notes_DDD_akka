@@ -1,29 +1,19 @@
 package modules.users.query.getuser
 
-import akka.actor.{ActorSystem, Props}
+import akka.actor.ActorRef
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpResponse, StatusCodes}
 import akka.pattern.ask
-import akka.http.scaladsl.server.{Directives, Route}
-import akka.http.scaladsl.server.Directives.{complete, get, path}
-import akka.stream.ActorMaterializer
-import akka.util.Timeout
-import libs.akka.{DefaultController, GlobalActorSystem}
-import libs.api.StandardHttpController
+import akka.http.scaladsl.server.Route
 import modules.users.akka.DefaultUsersController
-import modules.users.config.UserJsonProtocol
-
-import scala.concurrent.duration.DurationInt
 import spray.json._
 
-class GetUserHttpController extends DefaultUsersController {
+class GetUserHttpController(val boundedContextActor: ActorRef) extends DefaultUsersController {
 
   import system.dispatcher
 
-  val service = system.actorOf(Props[GetUserService])
-
   val route: Route = get {
-    path("user" / Segment) { idu: String =>
-        complete((service ? GetUser(idu))
+    path("user" / Segment) { idu =>
+        complete((boundedContextActor ? GetUser(idu))
           .mapTo[GetUserResponse]
           .map { opt =>
             opt.userOption match {

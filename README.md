@@ -1,5 +1,11 @@
 This project is an example of a REST API service.
 
+NOTE: pending to be refactored, because the exchanging messages between the different databases and different 
+services can cause race conditions. One feasible implementation to handle this casuistic is assigning an actor 
+for each bounded context. The bad news of this approach are that we will have bottlenecks, and may not be scalable
+horizontally.
+
+
 The architecture is based on akka actors:
 
 HTTP Level has their own actors to handle the incoming HTTP requests,

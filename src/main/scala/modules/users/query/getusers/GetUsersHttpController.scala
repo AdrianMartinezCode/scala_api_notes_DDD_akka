@@ -1,6 +1,6 @@
 package modules.users.query.getusers
 
-import akka.actor.Props
+import akka.actor.{ActorRef, Props}
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpResponse}
 import akka.http.scaladsl.server.{Directives, Route}
 import akka.stream.ActorMaterializer
@@ -11,18 +11,15 @@ import modules.users.akka.DefaultUsersController
 import modules.users.config.UserJsonProtocol
 import modules.users.query.getuser.GetUserService
 import akka.pattern.ask
-
 import spray.json._
 
-class GetUsersHttpController extends DefaultUsersController {
+class GetUsersHttpController(val boundedContextActor: ActorRef) extends DefaultUsersController {
 
   import system.dispatcher
 
-  val service = system.actorOf(Props[GetUsersService])
-
   val route: Route = get {
     path("user") {
-      complete((service ? GetUsers)
+      complete((boundedContextActor ? GetUsers)
         .mapTo[GetUsersResponse]
         .map { users =>
           HttpResponse(

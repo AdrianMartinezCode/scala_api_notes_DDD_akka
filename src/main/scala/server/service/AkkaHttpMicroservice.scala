@@ -15,9 +15,7 @@ object AkkaHttpMicroservice extends App {
   implicit val executor = system.dispatcher
   implicit val materializer = ActorMaterializer()
 
-  val appBundle = new AppBundle()
-
-  val bindingFuture = Http().bindAndHandle(appBundle.getRoutes(), "localhost", 8080)
+  private val bindingFuture = Http().bindAndHandle(AppBundle.getRoutes(), "localhost", 8080)
   println(s"Server online at http://localhost:8080/\nPress return to stop...")
   StdIn.readLine()
   bindingFuture

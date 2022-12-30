@@ -9,18 +9,19 @@ import scala.concurrent.{ExecutionContextExecutor, Future}
 import modules.users.database.preseed.DefinedUsers
 import modules.users.database.messages.UsersRepositoryMessages
 
+import scala.collection.mutable
 import scala.collection.mutable.Map
 
 class UsersRepository extends Actor with ActorLogging {
 
-  implicit val system = GlobalActorSystem.system
+  implicit val system: ActorSystem = GlobalActorSystem.system
   implicit val executionContext: ExecutionContextExecutor = system.dispatcher
 
   import UsersRepositoryMessages._
 
-  var users_db: Map[String, UserModel] = Map()
+  private val users_db: mutable.Map[String, UserModel] = mutable.Map()
 
-  override def preStart() = initBd()
+  override def preStart(): Unit = initBd()
 
   private def initBd(): Future[Done] = {
     DefinedUsers.predefinedUsersDb.foreach(user => users_db += (user.idUser -> user))
@@ -42,7 +43,7 @@ class UsersRepository extends Actor with ActorLogging {
     users_db.get(idUser)
   }
 
-  private def saveUser(users_par: UserModel) = {
+  private def saveUser(users_par: UserModel): Unit = {
     users_db += (users_par.idUser -> users_par)
     ()
   }

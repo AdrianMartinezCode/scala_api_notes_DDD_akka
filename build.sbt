@@ -40,7 +40,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpV,
     "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpV,
     "org.scalatest"     %% "scalatest" % scalaTestV % "test",
-    "io.spray" %%  "spray-json" % "1.2.5"
+    "io.spray" %%  "spray-json" % "1.3.6"
   )
 }
 
