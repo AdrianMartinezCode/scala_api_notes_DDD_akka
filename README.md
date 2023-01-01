@@ -1,4 +1,37 @@
-This project is an example of a REST API service.
+This project is an example of a distributed REST API service with DDD approach.
+
+
+![Actors Diagram](https://github.com/AdrianMartinezCode/scalarestapinotes/blob/master/resources/bounded_context_diagram.jpg?raw=true)
+
+We have an actor Pool where every actor have their own segment of the database.
+
+Every database manages their assigned entities preventing race conditions at write 
+or read operations and scaling through the number of entities
+
+The function of the oracle is to provide the reference of the actor by the correspondent
+idEntity, and next, making the operation the correspondent actor.
+
+The entities are assigned to their database by Round Robin method.
+
+If we want to make another call to another bounded context, we can call directly to the
+other wrapped context and the other bounded context have the same logic.
+
+So, the dependencies actors hierarchy is:
+![Actors Diagram](https://github.com/AdrianMartinezCode/scalarestapinotes/blob/master/resources/actor_dependencies_diagram.jpg?raw=true)
+
+Evidently, this is the messages actors dependencies, at the software view we respect the SOLID principles.
+
+With this approach we can prevent the race conditions on the read/write operations because every database
+actor is the owner of their entities, and only this actor is who can modify these.
+
+To extend this to a real databases we should make a database by actor and another for the oracle.
+
+Will the oracle have bottlenecks? Probably yes if we choose a slow database, but if we use a fast read database
+like cassandra we can avoid any bottlenecks that can appear.
+
+
+-----------------------------------------------
+OLD
 
 NOTE: pending to be refactored, because the exchanging messages between the different databases and different 
 services can cause race conditions. One feasible implementation to handle this casuistic is assigning an actor 
