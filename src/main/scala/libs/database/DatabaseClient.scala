@@ -13,7 +13,8 @@ import scala.concurrent.Await
 import scala.language.postfixOps
 
 
-class DatabaseClient[T](actorSystem: ActorSystem, poolSize: Int, entityName: String) {
+class DatabaseClient[T <: DatabaseModel](actorSystem: ActorSystem, poolSize: Int, entityName: String)
+  extends DatabasePort[T] {
 
   import ActorOracleMessages._
   import DatabaseMessages._
@@ -35,10 +36,10 @@ class DatabaseClient[T](actorSystem: ActorSystem, poolSize: Int, entityName: Str
       .mapTo[GetRefActorByIdEntityResponse]
       .map(_.refActorOpt)
 
-  def getEntity(idEntity: String) : Future[Option[T]] =
+  def getEntity(idEntity: String) : Future[Option[T]] = {
     getRefActorByIdEntity(idEntity)
-      .map(
-        _.map { refActorString =>
+      .flatMap(
+        _.fold(Future.successful[Option[T]](None)){ refActorString =>
           // we will to assume, that the actor references and oracle stored references always are coherent
           val actorRef = actors.getOrElse(refActorString, throw new Exception("Actor not found"))
           (actorRef ? GetEntityByIdEntity)
@@ -46,4 +47,39 @@ class DatabaseClient[T](actorSystem: ActorSystem, poolSize: Int, entityName: Str
             .map(_.entity)
         }
       )
+  }
+
+  def getAllEntities: Future[List[T]] = {
+    actors.map(_._2 ? GetAllEntities())
+      .map(_.mapTo[GetAllEntitiesResponse[T]].map(_.entities))
+      .foldLeft(Future.successful(List[T]()))((acc, v) => acc.flatMap(l => v.map(_ ++ l)))
+  }
+
+  def saveEntity(entity: T) : Future[Option[T]] = {
+    getRefActorByIdEntity(entity.idEntity)
+      .flatMap(_.fold(
+        (oracle ? SetIdEntityRefActor(entity.idEntity))
+          .mapTo[SetIdEntityRefActorResponse]
+          .map(_.refActor)
+      )(Future.successful))
+      .flatMap{ refActor =>
+        val actor = actors.getOrElse(refActor, throw new Exception("actor not found"))
+        (actor ? SaveEntity(entity))
+          .mapTo[SaveEntityResponse[T]]
+          .map(_.oldPossibleEntity)
+      }
+  }
+
+  def deleteEntity(idEntity: String) : Future[Either[EntityNotFoundException, Option[T]]] = {
+    getRefActorByIdEntity(idEntity)
+      .flatMap{
+        case Some(refActor) =>
+          val actor = actors.getOrElse(refActor, throw new Exception("actor not found"))
+          (actor ? RemoveEntity(idEntity))
+            .mapTo[RemoveEntityResponse[T]]
+            .map(_.entity)
+            .map(e => Right(e))
+        case None => Future.successful(Left(new EntityNotFoundException()))
+      }
+  }
 }
