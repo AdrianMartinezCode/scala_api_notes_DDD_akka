@@ -11,24 +11,23 @@ import modules.users.akka.DefaultUsersController
 import modules.users.config.UserJsonProtocol
 import modules.users.query.getuser.GetUserService
 import akka.pattern.ask
+import libs.ddd.CommandBus
 import spray.json._
 
-class GetUsersHttpController(val boundedContextActor: ActorRef) extends DefaultUsersController {
-
-  import system.dispatcher
+class GetUsersHttpController(ch: CommandBus[_, _])
+  extends DefaultUsersController[GetUsersQuery, GetUsersQueryResponse](ch) {
 
   val route: Route = get {
     path("user") {
-      complete((boundedContextActor ? GetUsers)
-        .mapTo[GetUsersResponse]
-        .map { users =>
+      complete(commandBus.execute(GetUsersQuery())
+        .map(users =>
           HttpResponse(
             entity = HttpEntity(
               ContentTypes.`application/json`,
               users.users.toJson.prettyPrint
             )
           )
-        }
+        )
       )
     }
   }

@@ -4,7 +4,6 @@ import akka.actor.Props
 import akka.pattern.ask
 import libs.akka.DefaultActor
 import modules.notes.database.NotesRepository
-import modules.users.akka.UsersBoundedContext
 
 import scala.concurrent.Future
 

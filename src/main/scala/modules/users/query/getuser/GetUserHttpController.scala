@@ -4,17 +4,16 @@ import akka.actor.ActorRef
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpResponse, StatusCodes}
 import akka.pattern.ask
 import akka.http.scaladsl.server.Route
+import libs.ddd.CommandBus
 import modules.users.akka.DefaultUsersController
 import spray.json._
 
-class GetUserHttpController(val boundedContextActor: ActorRef) extends DefaultUsersController {
-
-  import system.dispatcher
+class GetUserHttpController(ch: CommandBus[_, _])
+  extends DefaultUsersController[GetUserQuery, GetUserQueryResponse](ch) {
 
   val route: Route = get {
     path("user" / Segment) { idu =>
-        complete((boundedContextActor ? GetUser(idu))
-          .mapTo[GetUserResponse]
+        complete(commandBus.execute(GetUserQuery(idu))
           .map { opt =>
             opt.userOption match {
               case None => HttpResponse(status = StatusCodes.NotFound)

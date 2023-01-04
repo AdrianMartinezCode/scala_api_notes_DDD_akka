@@ -14,7 +14,8 @@ import scala.collection.mutable
 import scala.collection.mutable.Map
 
 class UsersRepository(actorSystem: ActorSystem, poolSize: Int)
-  extends DatabaseClient[UserModel](actorSystem, poolSize, "User") {
+  extends DatabaseClient[UserModel](actorSystem, poolSize, "User")
+  with UsersRepositoryPort {
 
 
 

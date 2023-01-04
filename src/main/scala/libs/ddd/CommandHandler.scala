@@ -6,8 +6,10 @@ import libs.akka.GlobalActorSystem
 import scala.concurrent.Future
 import scala.concurrent.duration.DurationInt
 
-trait ServiceHandler[Request, Response] {
+trait CommandHandler[Request <: Command, Response] {
   def handleMessage(request: Request): Future[Response]
   implicit val system = GlobalActorSystem.system
-  implicit val defaultTimeout = Timeout(2 seconds)
+  implicit val ec = system.dispatcher
+
+  def getName: String = classOf[Request].getName
 }

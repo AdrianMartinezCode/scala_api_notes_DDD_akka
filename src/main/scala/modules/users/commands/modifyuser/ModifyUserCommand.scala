@@ -1,5 +1,16 @@
 package modules.users.commands.modifyuser
 
-case class ModifyUserCommand(idUser: String, name: Option[String])
+import libs.ddd.{Command}
+import modules.users.domain.User
 
-type ModifyUserCommandResponse = Either[String, String]
+case class ModifyUserCommand(idUser: String, name: Option[String]) extends Command
+
+
+object ModifyUserCommandResponse {
+  def apply(exception: Exception) = ModifyUserCommandResponse(Left(exception))
+
+  def apply(user: Option[User]) = ModifyUserCommandResponse(Right(user))
+}
+case class ModifyUserCommandResponse(result: Either[Exception, Option[User]]) {
+
+}

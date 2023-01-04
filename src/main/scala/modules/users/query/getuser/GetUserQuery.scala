@@ -1,6 +1,7 @@
 package modules.users.query.getuser
 
+import libs.ddd.Command
 import modules.users.domain.User
 
-case class GetUser(idUser: String)
-case class GetUserResponse(userOption: Option[User])
+case class GetUserQuery(idUser: String) extends Command
+case class GetUserQueryResponse(userOption: Option[User])
