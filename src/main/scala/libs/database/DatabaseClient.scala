@@ -28,8 +28,8 @@ class DatabaseClient[T <: DatabaseModel](actorSystem: ActorSystem, poolSize: Int
       Await.result(future, 3 seconds)
     }.toMap
 
-  private val oracle = actorSystem.actorOf(Props[ActorOracle], s"Oracle##$entityName")
-  private def getActorName(i: Int) = s"$entityName##$i"
+  private val oracle = actorSystem.actorOf(Props[ActorOracle], s"Oracle--$entityName")
+  private def getActorName(i: Int) = s"$entityName--$i"
 
   private def getRefActorByIdEntity(idEntity: String): Future[Option[String]] =
     (oracle ? GetRefActorByIdEntity(idEntity))

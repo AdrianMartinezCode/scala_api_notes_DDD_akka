@@ -14,12 +14,12 @@ import akka.pattern.ask
 import libs.ddd.CommandBus
 import spray.json._
 
-class GetUsersHttpController(ch: CommandBus[_, _])
+class GetUsersHttpController(ch: CommandBus)
   extends DefaultUsersController[GetUsersQuery, GetUsersQueryResponse](ch) {
 
   val route: Route = get {
     path("user") {
-      complete(commandBus.execute(GetUsersQuery())
+      complete(sendCommand(GetUsersQuery())
         .map(users =>
           HttpResponse(
             entity = HttpEntity(

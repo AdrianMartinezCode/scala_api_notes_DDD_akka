@@ -5,10 +5,8 @@ import modules.users.di.UsersBundleServices
 
 object AppBundleCommandBus {
 
-  val bus = new CommandBus[_, _]
+  val bus = new CommandBus
 
-  UsersBundleServices.getServices.foreach(bus.registerHandler)
-
-  def getBus: CommandBus[_, _] = bus
+  def getBus: CommandBus = bus
 
 }

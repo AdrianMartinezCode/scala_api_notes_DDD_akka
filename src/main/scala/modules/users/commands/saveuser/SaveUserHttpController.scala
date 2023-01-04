@@ -13,14 +13,14 @@ trait SaveUserDtoJsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val saveUserDtoFormat: RootJsonFormat[SaveUserDto] = jsonFormat1(SaveUserDto)
 }
 
-class SaveUserHttpController(ch: CommandBus[_, _])
+class SaveUserHttpController(ch: CommandBus)
   extends DefaultUsersController[SaveUserCommand, SaveUserCommandResponse](ch)
     with SaveUserDtoJsonSupport {
 
   val route: Route = post {
     path("user") {
       entity(as[SaveUserDto]) { dto =>
-        complete(commandBus.execute(SaveUserCommand(dto.name))
+        complete(sendCommand(SaveUserCommand(dto.name))
           .map { response =>
             HttpResponse(
               entity = HttpEntity(

@@ -8,12 +8,12 @@ import libs.ddd.CommandBus
 import modules.users.akka.DefaultUsersController
 import spray.json._
 
-class GetUserHttpController(ch: CommandBus[_, _])
+class GetUserHttpController(ch: CommandBus)
   extends DefaultUsersController[GetUserQuery, GetUserQueryResponse](ch) {
 
   val route: Route = get {
     path("user" / Segment) { idu =>
-        complete(commandBus.execute(GetUserQuery(idu))
+        complete(sendCommand(GetUserQuery(idu))
           .map { opt =>
             opt.userOption match {
               case None => HttpResponse(status = StatusCodes.NotFound)

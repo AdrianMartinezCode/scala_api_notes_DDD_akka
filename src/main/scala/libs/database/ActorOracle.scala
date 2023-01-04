@@ -24,8 +24,14 @@ class ActorOracle extends Actor {
       val refActor = getNextRefActor
       users += (idEntity -> refActor)
       refActors.get(refActor)
-        .fold(refActors += (refActor -> Set(idEntity)))(
-          s => s += idEntity
+        .fold({
+          refActors += (refActor -> mutable.Set(idEntity))
+          Unit
+        })(
+          s => {
+            s += idEntity
+            Unit
+          }
         )
       sender() ! SetIdEntityRefActorResponse(refActor)
     case RemoveIdEntity(idEntity) =>

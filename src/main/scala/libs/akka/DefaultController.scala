@@ -4,16 +4,18 @@ import akka.stream.ActorMaterializer
 import akka.util.Timeout
 import libs.ddd.{Command, CommandBus, CommandHandler}
 
+import scala.concurrent.Future
 import scala.concurrent.duration.DurationInt
+import scala.reflect.runtime.universe._
 
-abstract class DefaultController[C <: Command, R](commandBusUntyped: CommandBus[_, _]) {
+abstract class DefaultController[C <: Command: TypeTag, R](commandBus: CommandBus) {
   implicit val system = GlobalActorSystem.system
   implicit val defaultTimeout = Timeout(2 seconds)
   implicit val materializer = ActorMaterializer()
   implicit val ec = system.dispatcher
 
-  implicit def getCommandName : String = classOf[C].getName
+  implicit def getCommandName : String = typeOf[C].toString
 
-  val commandBus : CommandBus[C, R] = commandBusUntyped.asInstanceOf[CommandBus[C, R]]
+  def sendCommand(command: C): Future[R] = commandBus.execute(command)
 
 }

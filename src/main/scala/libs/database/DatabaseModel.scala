@@ -1,3 +1,3 @@
 package libs.database
 
-case class DatabaseModel(idEntity: String)
+class DatabaseModel(val idEntity: String)

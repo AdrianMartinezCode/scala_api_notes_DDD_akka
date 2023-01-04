@@ -5,8 +5,9 @@ import libs.akka.DefaultController
 import libs.api.StandardHttpController
 import libs.ddd.{Command, CommandBus, CommandHandler}
 import modules.users.config.UserJsonProtocol
+import scala.reflect.runtime.universe._
 
-abstract class DefaultUsersController[C <: Command, R](ch: CommandBus[_, _])
+abstract class DefaultUsersController[C <: Command: TypeTag, R](ch: CommandBus)
   extends DefaultController[C, R](ch)
   with Directives
   with UserJsonProtocol

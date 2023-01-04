@@ -20,7 +20,7 @@ class ModifyUserService(usersRepository: UsersRepositoryPort)
             // TODO retrieve the notes from the notes repository as a message
             .map(_.map(_.map(model => User(model.name, model.idEntity, List()))))
             .map(_.map(user => ModifyUserCommandResponse(user)))
-            .getOrElse(Future.successful(Left(new Exception("Name not specified"))))
+            .getOrElse(Future.successful(ModifyUserCommandResponse(new Exception("Name not specified"))))
       }
 
 }

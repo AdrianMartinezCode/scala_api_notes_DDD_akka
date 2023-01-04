@@ -15,13 +15,14 @@ trait ModifyUserDtoJsonSupport extends SprayJsonSupport with DefaultJsonProtocol
 }
 
 
-class ModifyUserHttpController(ch: CommandBus[_, _])
+class ModifyUserHttpController(ch: CommandBus)
   extends DefaultUsersController[ModifyUserCommand, ModifyUserCommandResponse](ch)
     with ModifyUserDtoJsonSupport {
 
   val route: Route = put {
     path("user" / Segment) { idUser =>
-      entity(as[ModifyUserDto]) { dto => complete(commandBus.execute(ModifyUserCommand(idUser, dto.name))
+      entity(as[ModifyUserDto]) { dto => complete(sendCommand(ModifyUserCommand(idUser, dto.name))
+        .map(_.result)
         .map {
           case Left(_) => HttpResponse(
             status = StatusCodes.NotFound
